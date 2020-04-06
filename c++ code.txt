@@ -1,0 +1,36 @@
+
+#include <iostream>
+using namespace std;
+
+class Another{
+public:
+    Another(int a, int b) //Конструктор
+    {
+      cout<<"Конструктор с двумя агрументами:"<<endl;
+      cout<<"Первый - "<<a<<endl;
+      cout<<"Второй - "<<b<<endl;
+    }
+    
+     Another(string a, double b, int v) //Второй конструктор
+    {
+      cout<<"Конструктор с тремя агрументами:"<<endl;
+      cout<<a<<endl;
+      cout<<"Второй - "<<b<<endl;
+      cout<<"Третий - "<<v<<endl;
+      cout<<b*v<<" - умножение"<<endl;
+      cout<<"***-------***"<<endl;
+    }
+ 
+    ~Another() // Деструктор
+    {
+        cout<<"Удаление объекта"<<endl;
+    }
+};
+ 
+int main()
+{
+setlocale(LC_ALL, "ru");
+Another obj(10, 15);
+cout<<"***-------***"<<endl;
+Another objTwo("Hello World!", 15.45, 5);
+return 0; } 
